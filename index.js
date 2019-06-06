@@ -2,7 +2,18 @@ import { Pixel, Mand } from "wasm-mandelbrot";
 import { memory } from "wasm-mandelbrot/wasm_mandelbrot_bg";
 
 function draw() {
-  const mand = Mand.new(-2.0, 1.0, -1.5, 1.5);
+  const minx = Number.parseFloat(document.getElementById("minx").value)
+  const maxx = Number.parseFloat(document.getElementById("maxx").value);
+  const miny = Number.parseFloat(document.getElementById("miny").value);
+  const maxy = Number.parseFloat(document.getElementById("maxy").value);
+  const canw = Number.parseInt(document.getElementById("canw").value);
+  const canh = Number.parseInt(document.getElementById("canh").value);
+  const iters = Number.parseInt(document.getElementById("iters").value);
+
+
+
+  // const mand = Mand.new(-2.0, 1.0, -1, 1,1800,800);
+  const mand = Mand.new(minx,maxx,miny,maxy,canw,canh,iters);
   const width = mand.width();
   const height = mand.height();
 
