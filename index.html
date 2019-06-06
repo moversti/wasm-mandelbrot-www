@@ -15,9 +15,40 @@
         align-items: center;
         justify-content: center;
       }
+      div {
+        display: flex;
+        flex-direction: row;
+      }
     </style>
   </head>
   <body>
+    <div>
+      <label>
+        Min X
+        <input />
+      </label>
+      <label>
+        Max X
+        <input />
+      </label>
+      <label>
+        Min Y
+        <input />
+      </label>
+      <label>
+        Max Y
+        <input />
+      </label>
+      <label>
+        Canvas W
+        <input />
+      </label>
+      <label>
+        Canvas H
+        <input />
+      </label>
+      <button id="draw-btn">Draw</button>
+    </div>
     <canvas id="mandelbrot-canvas"></canvas>
     <script src="./bootstrap.js"></script>
   </body>
